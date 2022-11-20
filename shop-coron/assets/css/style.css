@@ -492,6 +492,7 @@
 
 /*banner slider css here*/
 .single_slider {
+	width: 720px;
 	height: 350px;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -529,7 +530,6 @@
 .banner_slider {
 	margin-bottom: 65px;
 }
-
 .banner_slider.slider_two {
 	margin-bottom: 65px;
 }
