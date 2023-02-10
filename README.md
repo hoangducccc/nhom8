@@ -26,8 +26,8 @@
 
 - Tại XAMPP Control Panel, mở Admin tại MySQL
 - Tạo cơ sở dữ liệu mới:
-- [] Mới -> Đặt tên database: 'dhd' -> Tạo
-- [] Nhập -> Choosen File -> chọn file trong source code dhd(1).sql -> Nhập
+- [ ] Mới -> Đặt tên database: 'dhd' -> Tạo
+- [ ] Nhập -> Choosen File -> chọn file trong source code dhd(1).sql -> Nhập
 - Tại cửa sổ trình duyệt web: http://localhost/nhom8/tb-yte
 
 # Link Wordpress:
