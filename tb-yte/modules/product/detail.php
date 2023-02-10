@@ -13,7 +13,7 @@ $item = get_product_by_id($id);
                                 <div class="col-12">
                                     <div class="breadcrumb_content">
                                         <ul>
-                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li><a href="?mod=home&act=main">Trang chủ</a></li>
                                             <li><i class="fa fa-angle-right"></i></li>
                                             <li>Chi tiết sản phẩm</li>
                                         </ul>

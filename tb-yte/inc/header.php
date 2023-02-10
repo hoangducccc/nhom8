@@ -41,9 +41,9 @@ ob_start();
                                                     <?php if(is_login())
                                                     {
                                                         ?>
-                                                    <li><a href="?mod=cart&act=show" title="My cart">Giỏ hàng</a></li>
-                                                    <li><a href="?mod=users&act=main" title="My cart"><?php if(is_login())  echo info_user('fullname'); ?><i class="fa fa-user"></i></a></li>
-                                                     <li><a href="?mod=log&act=logout" title="My cart">Đăng xuất</a></li>
+                                                    <li><a href="?mod=cart&act=show" title="My cart">Giỏ hàng <i class="fa fa_cart"></i></a></li>
+                                                    <li><a href="?mod=users&act=main" title="My account"><?php if(is_login())  echo info_user('fullname'); ?> <i class="fa fa-user"></i></a></li>
+                                                     <li><a href="?mod=log&act=logout" title="Logout">Đăng xuất</a></li>
                                                     <?php
                                                     } else{
                                                     ?>
@@ -66,7 +66,7 @@ ob_start();
                                        <!--logo start-->
                                         <div class="col-lg-3 col-md-3">
                                             <div class="logo">
-                                                <a href="index.html"><img src="assets\img\logo\logo_transparent1.png" alt=""></a>
+                                                <a href="?mod=home&act=main"><img src="assets\img\logo\logo_transparent1.png" alt=""></a>
                                             </div>
                                         </div>
                                         <!--logo end-->
@@ -90,17 +90,7 @@ ob_start();
                                                 <div class="main_menu d-none d-lg-block">
                                                     <nav>
                                                         <ul>
-                                                            
                                                             <li class="active"><a href="index.php">TRANG CHỦ</a>
-                                                                <div class="mega_menu jewelry">
-                                                                    <div class="mega_items jewelry">
-                                                                        <!--<ul>
-                                                                            <li><a href="index.html">Home 1</a></li>
-                                                                            <li><a href="index-2.html">Home 2</a></li>
-                                                                        </ul>-->
-                                                                    </div>
-                                                                </div> 
-                                                            </li>
                                                             <li><a href="?mod=product&act=main">SẢN PHẨM </a>
                                                                 <div class="mega_menu jewelry">
                                                                     <div class="mega_items jewelry">
@@ -119,9 +109,8 @@ ob_start();
                                                                 </div>  
                                                             </li>
                                                          
-                                                            <li><a href="?mod=page&act=main">GIỚI THIỆU</a></li>
+                                                            <li><a href="#">GIỚI THIỆU</a></li>
                                                             <li><a href="?mod=page&act=contact">LIÊN HỆ</a></li>
-                                                            <li><a href="?mod=post&act=detail">HỢP TÁC</a></li>
                                                         </ul>
                                                     </nav>
                                                 </div>

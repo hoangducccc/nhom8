@@ -1,8 +1,7 @@
 <?php
 get_header();
 ?>
-﻿<?php
-
+<?php
 $cat_id = (int)$_GET['cat_id'];
 // lấy thông tin danh mục
 $info_cat = get_info_cat($cat_id - 1);
@@ -32,8 +31,36 @@ $list_item = get_list_product_by_cat($cat_id);
     <div class="row">
         <div class="col-12">
             <!--banner slider start-->
-            <div class="banner_slider fullwidht  mb-35">
-                <img src="assets\img/banner/Suckhoegiadinh.jpg" alt="">
+            <div class="banner_slider slider_1">
+                <div class="slider_active owl-carousel">
+                    <div class="single_slider" style="background-image: url(assets/img/slider/hocy1.jpg)">
+                        <div class="slider_content">
+                            <div class="slider_content_inner">
+                                <!--<h1>Women's Fashion</h1>-->
+                                <p>SỨC KHỎE VÀ HẠNH PHÚC CỦA BẠN</p>
+                                <p>LÀ NIỀM VUI VÀ TRÁCH NHIỆM CỦA CHÚNG TÔI</p>
+                                <!--<a href="#">shop now</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_slider" style="background-image: url(assets/img/slider/slider2.jpg)">
+                        <div class="slider_content">
+                            <div class="slider_content_inner">
+                                <h1>Đảm bảo</h1>
+                                <p>Chất lượng - Hiệu quả- Lan tỏa niềm tin</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_slider" style="background-image: url(assets/img/slider/slider3.jpg)">
+                        <div class="slider_content">
+                            <div class="slider_content_inner">
+                                <h1>Uy tín</h1>
+                                <p>Niềm tin của mọi nhà</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--banner slider start-->
         </div>

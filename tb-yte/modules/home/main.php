@@ -53,16 +53,14 @@ get_header();
                                 <h1>Đảm bảo</h1>
                                 <p>Chất lượng - Hiệu quả- Lan tỏa niềm tin</p>
                                 </p>
-                                <a href="#">shop now</a>
                             </div>
                         </div>
                     </div>
                     <div class="single_slider" style="background-image: url(assets/img/slider/slider3.jpg)">
                         <div class="slider_content">
                             <div class="slider_content_inner">
-                                <h1>Best Collection</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                                <a href="#">shop now</a>
+                                <h1>Uy tín</h1>
+                                <p>Niềm tin của mọi nhà</p>
                             </div>
                         </div>
                     </div>
