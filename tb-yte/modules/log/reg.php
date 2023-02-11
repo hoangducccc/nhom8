@@ -37,7 +37,7 @@ if (isset($_POST['btn_reg'])) {
             . "VALUES ('{$username}', '{$fullname}', '{$password}', '{$email}')";
         if (mysqli_query($conn, $sql))
             // redirect("?mod=log&act=login");
-            echo "<script>window.location.href='?mod=log&act=login';alert('Đăng kí thành công!');</script>";
+            echo "<script>alert('Đăng kí thành công!');window.location.href='?mod=log&act=login';</script>";
     } else {
         $error['acount'] = "Đăng kí không thành công";
     }

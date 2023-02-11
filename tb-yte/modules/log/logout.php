@@ -9,6 +9,6 @@ $_SESSION['cart']['info'] = array(
     'num_order' => 0,
     'total' => 0
 );
-echo "<script>window.location.href='?mod=home&act=main';alert('Đăng xuất thành công!');</script>";
+echo "<script>alert('Đăng xuất thành công!');window.location.href='?mod=home&act=main';</script>";
 // redirect('index.php');
 ?>

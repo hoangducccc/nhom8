@@ -102,7 +102,7 @@ ob_start();
                                                     </div>
                                                 </li>
                                                 <li><a href="?mod=cart&act=main">QUẢN LÝ ĐƠN HÀNG</a></li>
-                                                <li><a href="">DOANH THU</a></li>
+                                                <li><a href="#">DOANH THU</a></li>
                                                 <li><a href="?mod=page&act=contact">LIÊN HỆ</a></li>
                                             </ul>
                                         </nav>
@@ -117,3 +117,7 @@ ob_start();
         </div>
     </div>
 </body>
+<div class="pos_page">
+    <div class="container">
+        <!--pos page inner-->
+        <div class="pos_page_inner">

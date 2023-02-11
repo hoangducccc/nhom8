@@ -1,28 +1,15 @@
 ﻿<?php
 get_header();
 ?>
-<?php
-function logged_in_redirect()
-{
-    if (is_login() === true) {
-?>
-        <script>
-            alert("logged in");
-        </script>
-<?php
-        header("refresh:5; url=index.php");
-        exit();
-    }
-}
-?>
+
 <?php
 if (isset($_POST['username'])) {
     $error = array();
-    // if (check_admin('admin@gmail.com', '123456')) {
-    //     $_SESSION['is_login'] = true;
-    //     $_SESSION['user_login'] = $username;
-    //     redirect("?mod=home&act=admin");
-    // }
+    if (check_admin('admin@gmail.com', '123456')) {
+        $_SESSION['is_login'] = true;
+        $_SESSION['user_login'] = $username;
+        redirect("?mod=home&act=admin");
+    }
     if (empty($_POST['username']))
         $error['username'] = "Không được để trống username";
     else {
@@ -33,7 +20,7 @@ if (isset($_POST['username'])) {
         }
     }
     if (empty($_POST['password']))
-        $error['password'] = "không được để trống password";
+        $error['password'] = "Không được để trống password";
     else {
         if (!is_password($_POST['password']))
             $error['password'] = "Password sử dụng 1 kí tự hoa, ký tự đặc biệt và dài từ 6-32 ký tự ";
@@ -45,13 +32,13 @@ if (isset($_POST['username'])) {
         if (check_admin($username, $password)) {
             $_SESSION['is_login'] = true;
             $_SESSION['user_login'] = $username;
-            echo "<script>window.location.href='?mod=home&act=admin';alert('Đăng nhập thành công!');</script>";
+            echo "<script>alert('Đăng nhập thành công!');window.location.href='?mod=home&act=admin';</script>";
             // redirect("?mod=home&act=admin");
         } else if (check_login($username, $password)) {
             //lưu trữ phiên đăng nhập
             $_SESSION['is_login'] = true;
             $_SESSION['user_login'] = $username;
-            echo "<script>window.location.href='?mod=home&act=main';alert('Đăng nhập thành công!');</script>";
+            echo "<script>alert('Đăng nhập thành công!');window.location.href='?mod=home&act=main';</script>";
             // redirect("?mod=home&act=main");
         } else {
             $error['acount'] = "Đăng nhập thất bại";
