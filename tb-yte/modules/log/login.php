@@ -1,7 +1,20 @@
 ﻿<?php
 get_header();
 ?>
-
+<?php
+function logged_in_redirect()
+{
+    if (is_login() === true) {
+?>
+        <script>
+            alert("logged in");
+        </script>
+<?php
+        header("refresh:5; url=index.php");
+        exit();
+    }
+}
+?>
 <?php
 if (isset($_POST['username'])) {
     $error = array();
@@ -32,12 +45,14 @@ if (isset($_POST['username'])) {
         if (check_admin($username, $password)) {
             $_SESSION['is_login'] = true;
             $_SESSION['user_login'] = $username;
-            redirect("?mod=home&act=admin");
+            echo "<script>window.location.href='?mod=home&act=admin';alert('Đăng nhập thành công!');</script>";
+            // redirect("?mod=home&act=admin");
         } else if (check_login($username, $password)) {
             //lưu trữ phiên đăng nhập
             $_SESSION['is_login'] = true;
             $_SESSION['user_login'] = $username;
-            redirect("?mod=home&act=main");
+            echo "<script>window.location.href='?mod=home&act=main';alert('Đăng nhập thành công!');</script>";
+            // redirect("?mod=home&act=main");
         } else {
             $error['acount'] = "Đăng nhập thất bại";
         }

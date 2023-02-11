@@ -36,7 +36,8 @@ if (isset($_POST['btn_reg'])) {
         $sql = "INSERT INTO `dhd_users` (`username`, `fullname`, `password`, `email`)"
             . "VALUES ('{$username}', '{$fullname}', '{$password}', '{$email}')";
         if (mysqli_query($conn, $sql))
-            redirect("?mod=log&act=login");
+            // redirect("?mod=log&act=login");
+            echo "<script>window.location.href='?mod=log&act=login';alert('Đăng kí thành công!');</script>";
     } else {
         $error['acount'] = "Đăng kí không thành công";
     }
