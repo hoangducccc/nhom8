@@ -49,10 +49,10 @@ $list_cat = $list_product_cat;
 
             <!--new product area start-->
 
-            <div class="new_product_area"> 
+            <div class="new_product_area">
                 <?php
                 foreach ($list_cat as $cat) {
-                    ?>
+                ?>
                     <div class="block_title">
                         <h3><?php echo $cat['cat_title'] ?></h3>
                     </div>
@@ -64,10 +64,10 @@ $list_cat = $list_product_cat;
                         <div class="product_active owl-carousel">
                             <?php
                             if (!empty($list_item)) {
-                                ?>
+                            ?>
                                 <?php
                                 foreach ($list_item as $item) {
-                                    ?>
+                                ?>
                                     <div class="col-lg-3">
                                         <div class="single_product">
                                             <div class="product_thumb">
@@ -80,7 +80,7 @@ $list_cat = $list_product_cat;
                                                 </div>
                                             </div>
                                             <div class="product_content">
-                                                <span class="product_price_goc"><?php echo number_format($item['price']).' VND' ?></span>
+                                                <span class="product_price_goc"><?php echo number_format($item['price']) . ' VND' ?></span>
                                                 <span class="product_price_dis">3.900.000 VND</span>
                                                 <h3 class="product_name"><?php echo $item['product_name'] ?></h3>
                                                 <!--<h3 class="product_title"><a href="single-product-video.html">Curabitur sodales</a></h3>-->
@@ -93,15 +93,15 @@ $list_cat = $list_product_cat;
                                             </div>
                                         </div>
                                     </div>
-                                <?php
+                            <?php
                                 }
                             }
                             ?>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
-                ?>               
+                ?>
             </div>
             <!--new product area start-->
         </div>

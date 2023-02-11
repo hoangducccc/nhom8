@@ -8,6 +8,7 @@ $list_cat = $list_product_cat;
 <?php
 get_header();
 ?>
+
 <!--content-->
 <div class="pos_home_section">
     <div class="row pos_home">
@@ -49,59 +50,59 @@ get_header();
 
             <!--new product area start-->
 
-            <div class="new_product_area"> 
+            <div class="new_product_area">
                 <?php
                 foreach ($list_cat as $cat) {
-                    ?>
+                ?>
                     <div class="block_title">
                         <h3><?php echo $cat['cat_title'] ?></h3>
                     </div>
                     <div class="row">
+                        <?php
+                        #lấy danh sách sản phẩm
+                        $list_item = get_list_product_by_cat($cat['cat_id']);
+                        ?>
+                        <div class="product_active owl-carousel">
                             <?php
-                            #lấy danh sách sản phẩm
-                            $list_item = get_list_product_by_cat($cat['cat_id']);
+                            if (!empty($list_item)) {
                             ?>
-                            <div class="product_active owl-carousel">
                                 <?php
-                                if (!empty($list_item)) {
-                                    ?>
-                                    <?php
-                                    foreach ($list_item as $item) {
-                                        ?>
-                            <div class="col-lg-3">
-                                <div class="single_product">
-                                    <div class="product_thumb">
-                                        <a href="<?php echo $item['url'] ?>"><img src="<?php echo "assets/img/product/{$item['thumb']}" ?>" alt=""></a>
-                                        <div class="img_icone">
-                                            <img src="assets\img\cart\span-new.png" alt="">
-                                        </div>
-                                        <div class="product_action">
-                                            <a href="<?php echo "?mod=cart&act=add&id={$item['id']}" ?>"> <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</a>
-                                        </div>
-                                    </div>
-                                    <div class="product_content">
-                                        <span class="product_price_goc"><?php echo $item['price'] ?></span>
-                                        <span class="product_price_dis">3.900.000 VND</span>
-                                        <h3 class="product_name"><?php echo $item['product_name'] ?></h3>
-                                        <!--<h3 class="product_title"><a href="single-product-video.html">Curabitur sodales</a></h3>-->
-                                    </div>
-                                    <div class="product_info">
-                                        <ul>
-                                            <li><a href="#" title=" Add to Wishlist ">Yêu thích</a></li>
-                                            <li><a href="<?php echo $item['url'] ?>" data-toggle="modal" data-target="#modal_box" title="Quick view">Thông tin chi tiết</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <?php }
-                                }
+                                foreach ($list_item as $item) {
                                 ?>
+                                    <div class="col-lg-3">
+                                        <div class="single_product">
+                                            <div class="product_thumb">
+                                                <a href="<?php echo $item['url'] ?>"><img src="<?php echo "assets/img/product/{$item['thumb']}" ?>" alt=""></a>
+                                                <div class="img_icone">
+                                                    <img src="assets\img\cart\span-new.png" alt="">
+                                                </div>
+                                                <div class="product_action">
+                                                    <a href="<?php echo "?mod=cart&act=add&id={$item['id']}" ?>"> <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</a>
+                                                </div>
+                                            </div>
+                                            <div class="product_content">
+                                                <span class="product_price_goc"><?php echo $item['price'] ?></span>
+                                                <span class="product_price_dis">3.900.000 VND</span>
+                                                <h3 class="product_name"><?php echo $item['product_name'] ?></h3>
+                                                <!--<h3 class="product_title"><a href="single-product-video.html">Curabitur sodales</a></h3>-->
+                                            </div>
+                                            <div class="product_info">
+                                                <ul>
+                                                    <li><a href="#" title=" Add to Wishlist ">Yêu thích</a></li>
+                                                    <li><a href="<?php echo $item['url'] ?>" data-toggle="modal" data-target="#modal_box" title="Quick view">Thông tin chi tiết</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            <?php }
+                            }
+                            ?>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
-                ?>               
+                ?>
             </div>
             <!--new product area start-->
         </div>

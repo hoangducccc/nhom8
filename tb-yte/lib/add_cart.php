@@ -44,19 +44,20 @@ function total_cart()
     }
 }
 
-function delete_cart($id){
-    if (isset($_SESSION['cart'])){
-        if(!empty($id)){
+function delete_cart($id)
+{
+    if (isset($_SESSION['cart'])) {
+        if (!empty($id)) {
             unset($_SESSION['cart']['buy'][$id]);
             update_cart();
-        }else
+        } else
             unset($_SESSION['cart']);
-        
     }
 }
 
-function update_cart_qty($qty){
-    foreach($qty as $id => $new_qty){
+function update_cart_qty($qty)
+{
+    foreach ($qty as $id => $new_qty) {
         $_SESSION['cart']['buy'][$id]['qty'] = $new_qty;
         $_SESSION['cart']['buy'][$id]['total'] = $_SESSION['cart']['buy'][$id]['price'] * $new_qty;
     }

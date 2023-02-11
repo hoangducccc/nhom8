@@ -27,6 +27,3 @@ if (isset($_POST['btn_save'])) {
             $error['acount'] = "Thay đổi không thành công";
         }
     }
-
-?>
-

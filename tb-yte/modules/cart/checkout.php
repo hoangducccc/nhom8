@@ -32,7 +32,7 @@ if (is_login()) {
         if (empty($error)) {
 
             $sql = "INSERT INTO `orders` (`user_id`, `fullname`, `email`, `phone_number`, `address`, `note`, `status`)"
-                    . "VALUES ('{$_SESSION['user_id']}', '{$fullname}', '{$email}', '{$phone}', '{$address}', '{$note}', '1')";
+                . "VALUES ('{$_SESSION['user_id']}', '{$fullname}', '{$email}', '{$phone}', '{$address}', '{$note}', '1')";
 
             if (mysqli_query($conn, $sql)) {
                 $order_id = mysqli_insert_id($conn);
@@ -41,7 +41,7 @@ if (is_login()) {
                     $qty = $item['qty'];
                     $price = $item['price'];
                     $order_details = "INSERT INTO `order_details` (`order_id`, `product_id`, `price`, `qty`)"
-                            . "VALUES ('{$order_id}', '{$pro_id}', '{$price}', '{$qty}')";
+                        . "VALUES ('{$order_id}', '{$pro_id}', '{$price}', '{$qty}')";
                     $true = mysqli_query($conn, $order_details);
                 }
 
@@ -58,7 +58,6 @@ if (is_login()) {
     redirect("?mod=log&act=login");
 }
 ?>
-﻿<!--breadcrumbs area start-->
 <div class="breadcrumbs_area">
     <div class="row">
         <div class="col-12">
@@ -125,20 +124,20 @@ if (is_login()) {
                             </thead>
                             <?php
                             if (isset($list_buy)) {
-                                ?>
+                            ?>
                                 <tbody>
                                     <?php
                                     foreach ($list_buy as $item) {
-                                        ?>
+                                    ?>
                                         <tr>
                                             <td><?php echo $item['product_name'] ?><strong> ×<?php echo $item['qty'] ?></strong></td>
                                             <td><?php echo number_format($item['total']) ?></td>
                                         </tr>
-                                        <?php
+                                    <?php
                                     }
-                                    ?>                                                                                     
+                                    ?>
                                 </tbody>
-                                <?php
+                            <?php
                             }
                             ?>
                             <tfoot>

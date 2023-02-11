@@ -46,6 +46,7 @@ $list_buy = get_list_buy();
                                     <?php
                                     foreach ($list_buy as $item) {
                                     ?>
+
                                         <tr>
                                             <td class="product_remove"><a href="<?php echo "?mod=cart&act=delete&id={$item['id']}" ?>"><i class="fa fa-trash-o"></i></a></td>
                                             <td class="product_thumb"> <a href="<?php echo "?mod=product&act=detail&id={$item['id']}" ?>"><img src="<?php echo "assets/img/product/{$item['thumb']}" ?>" alt=""></a></td>
@@ -59,54 +60,63 @@ $list_buy = get_list_buy();
                             </table>
                         </div>
                         <div class="cart_submit">
-                                <input type="submit" name="btn_update_cart" value="cập nhật giỏ hàng" />
-                        
+                            <input type="submit" name="btn_update_cart" value="cập nhật giỏ hàng" />
+
                         </div>
 
                     </div>
                 <?php
                 }
                 ?>
+
             </div>
         </div>
         <!--coupon code area start-->
-        <div class="coupon_area">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="coupon_code">
-                        <h3>Khuyến mãi</h3>
-                        <div class="coupon_inner">
-                            <p>Nhập mã giảm giá nếu có</p>
-                            <input placeholder="Coupon code" type="text">
-                            <button type="submit">áp dụng</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="coupon_code">
-                        <h3>Giỏ hàng</h3>
-                        <div class="coupon_inner">
-                            <div class="cart_subtotal">
-                                <p>Tổng giá sản phẩm</p>
-                                <p class="cart_amount"><?php echo number_format(total_cart()) ?></p>
-                            </div>
-                            <div class="cart_subtotal ">
-                                <p>Phí giao hàng</p>
-                                <p class="cart_amount"><span>Flat Rate:</span></p>
-                            </div>
-                            <div class="cart_subtotal">
-                                <p>Tổng</p>
-                                <p class="cart_amount"><?php echo number_format(total_cart()) ?></p>
-                            </div>
-                            <div class="checkout_btn">
-                                <a href="?mod=cart&act=checkout">Thanh toán</a>
+        <?php
+        if (!empty($list_buy)) {
+        ?>
+            <div class="coupon_area">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code">
+                            <h3>Khuyến mãi</h3>
+                            <div class="coupon_inner">
+                                <p>Nhập mã giảm giá nếu có</p>
+                                <input placeholder="Coupon code" type="text">
+                                <button type="submit">áp dụng</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!--coupon code area end-->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code">
+                            <h3>Giỏ hàng</h3>
+                            <div class="coupon_inner">
+                                <div class="cart_subtotal">
+                                    <p>Tổng giá sản phẩm</p>
+                                    <p class="cart_amount"><?php echo number_format(total_cart()) ?></p>
+                                </div>
+                                <div class="cart_subtotal ">
+                                    <p>Phí giao hàng</p>
+                                    <p class="cart_amount"><span>Flat Rate:</span></p>
+                                </div>
+                                <div class="cart_subtotal">
+                                    <p>Tổng</p>
+                                    <p class="cart_amount"><?php echo number_format(total_cart()) ?></p>
+                                </div>
+                                <div class="checkout_btn">
+                                    <a href="?mod=cart&act=checkout">Thanh toán</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+            } else {
+                ?>
+                    <p>Giỏ hàng trống, hãy mua sắm!</p>
+
+                <?php } ?>
+
+                <!--coupon code area end-->
     </form>
 </div>
 <!--shopping cart area end -->

@@ -12,7 +12,7 @@ function check_login($username, $password){
 function check_admin($username, $password){
     global $list_users;
     foreach($list_users as $user){
-        if($username == 'admin123' && $password == 'Admin.123'){
+        if($username == 'admin@gmail.com' && $password == '123456'){
               $_SESSION['user_id'] = $user['user_id'];
             return true;
         }

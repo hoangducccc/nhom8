@@ -1,7 +1,8 @@
 <?php
 
-function redirect($url){
-    if(!empty($url)){
+function redirect($url)
+{
+    if (!empty($url)) {
         header("Location: {$url}");
     }
 }
