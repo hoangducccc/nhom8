@@ -64,41 +64,41 @@ if (isset($_POST['btn_reg'])) {
 
 <!-- customer login start -->
 <div class="customer_login">
-    <div class="row">
-        <!--login area start-->
-        <div class="col-lg-6 col-md-6">
-            <div class="account_form">
-                <h2>Đăng kí</h2>
-                <form action="" method="POST">
-                    <p>
-                        <label>Họ và tên <span>*</span></label>
-                        <input type="text" name="fullname" id="fullname" autocomplete="off" /><br>
-                        <?php echo form_error('fullname'); ?>
+    <!-- <div class="row"> -->
+    <!--login area start-->
+    <!-- <div class="col-lg-6 col-md-6"> -->
+    <div class="account_form">
+        <h2>Đăng kí</h2>
+        <form action="" method="POST">
+            <p>
+                <label>Họ và tên <span>*</span></label>
+                <input type="text" name="fullname" id="fullname" autocomplete="off" /><br>
+                <?php echo form_error('fullname'); ?>
 
-                    </p>
-                    <p>
-                        <label>Email <span>*</span></label>
-                        <input type="text" name="email" id="email" autocomplete="off" /><br>
-                        <?php echo form_error('email'); ?>
+            </p>
+            <p>
+                <label>Email <span>*</span></label>
+                <input type="text" name="email" id="email" autocomplete="off" /><br>
+                <?php echo form_error('email'); ?>
 
-                    </p>
-                    <p>
-                        <label>Tên đăng nhập <span>*</span></label>
-                        <input type="text" name="username" id="username" autocomplete="off" /><br>
-                        <?php echo form_error('username'); ?>
-                    </p>
-                    <p>
-                        <label>Mật khẩu <span>*</span></label>
-                        <input type="password" name="password" id="password"><br>
-                        <?php echo form_error('password'); ?>
-                    </p>
-                    <div class="login_submit">
-                        <button type="submit" name="btn_reg" value="regsister">Đăng kí</button>
-                    </div>
-                </form>
+            </p>
+            <p>
+                <label>Tên đăng nhập <span>*</span></label>
+                <input type="text" name="username" id="username" autocomplete="off" /><br>
+                <?php echo form_error('username'); ?>
+            </p>
+            <p>
+                <label>Mật khẩu <span>*</span></label>
+                <input type="password" name="password" id="password"><br>
+                <?php echo form_error('password'); ?>
+            </p>
+            <div class="login_submit">
+                <button type="submit" name="btn_reg" value="regsister">Đăng kí</button>
             </div>
-        </div>
+        </form>
     </div>
+</div>
+</div>
 </div>
 <!-- customer login end -->
 <?php
