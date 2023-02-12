@@ -85,11 +85,11 @@ if (isset($_POST['username'])) {
                     <div class="login_submit">
                         <button type="submit" name="btn_login" value="login">Đăng nhập</button>
                         <a href="?mod=log&act=reg" class="reg">Đăng kí</a>
+                        <a href="#">Quên mật khẩu? </a>
                         <label for="remember">
                             <input id="remember" type="checkbox" name="remember_me">
                             Ghi nhớ đăng nhập
                         </label>
-                        <a href="#">Quên mật khẩu? </a>
                     </div>
                 </form>
             </div>

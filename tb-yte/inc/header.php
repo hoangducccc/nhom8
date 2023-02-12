@@ -108,7 +108,7 @@ ob_start();
                                                     </div>
                                                 </li>
 
-                                                <li><a href="#">GIỚI THIỆU</a></li>
+                                                <li><a href="?mod=page&act=gioithieu">GIỚI THIỆU</a></li>
                                                 <li><a href="?mod=page&act=contact">LIÊN HỆ</a></li>
                                             </ul>
                                         </nav>
