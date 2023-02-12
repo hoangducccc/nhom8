@@ -2,14 +2,12 @@
 
 # Link đến web sản phẩm
 
-- http://dhd.lovestoblog.com/
+- https://tbytedhd.000webhostapp.com/
 
 # Các loại tài khoản
 
-- Tài khoản admin: admin@gmail.com/123456
-- Tài khoản user1: thanhdat@gmail.com/123456
-- Tài khoản user2: hoangduc@gmail.com/123456
-- Tài khoản user3: minhhoa@gmail.com/123456
+- Tài khoản admin: admin123/Admin.123
+- Tài khoản user1: dat123/Dat.123
 
 # Cách sử dụng source code
 
