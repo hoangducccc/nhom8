@@ -52,7 +52,7 @@ if (is_login()) {
                 // redirect("?mod=home&act=main");
             }
         } else {
-            $error['acount'] = "đặt hàng không thành công";
+            $error['acount'] = "Đặt hàng không thành công";
         }
     }
 } else {
@@ -158,24 +158,24 @@ if (is_login()) {
                         </table>
                     </div>
                     <div class="payment_method">
-                        <div class="panel-default">
-                            <input id="payment" name="payment-method" type="radio" data-target="createp_account" value="online">
-                            <label for="payment" data-toggle="collapse" data-target="#method" aria-controls="method">Thanh toán banking</label>
-                        </div>
-                        <div class="panel-default">
-                            <input id="payment_defult" name="payment_method" type="radio" data-target="createp_account" value="cod">
-                            <label for="payment_defult" data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">Thanh toán khi nhận hàng</label>
-                        </div>
-                        <div class="order_button">
-                            <button type="submit" name="btn_checkout">Thanh toán</button>
-                        </div>
+                        <form name="quiz" action="" method="POST">
+                            <div class="panel-default">
+                                <label for="o1"><input type="radio" name="grp" id="o1" value="o1"> Thanh toán banking</label>
+                            </div>
+                            <div class="panel-default">
+                                <label for="o2"><input type="radio" name="grp" id="o2" value="o2"> Thanh toán khi nhận hàng</label>
+                            </div>
+                        </form>
                     </div>
-
+                    <div class="order_button">
+                        <button type="submit" name="btn_checkout">Thanh toán</button>
+                    </div>
                 </div>
-
             </div>
-        </form>
+
     </div>
+    </form>
+</div>
 </div>
 <!--Checkout page section end-->
 
