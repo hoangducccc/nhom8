@@ -112,7 +112,9 @@ $list_buy = get_list_buy();
                 <?php
             } else {
                 ?>
-                    <p>Giỏ hàng trống, hãy mua sắm!</p>
+                    <h3>Giỏ hàng trống, hãy mua sắm!</h3>
+                    <h4>&nbsp;&nbsp;</h4>
+
 
                 <?php } ?>
 
