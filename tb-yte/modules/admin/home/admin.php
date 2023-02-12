@@ -6,6 +6,7 @@ get_header_admin();
 global $list_product_cat;
 $list_cat = $list_product_cat;
 ?>
+
 <!--pos home section-->
 <div class="pos_home_section">
     <div class="row pos_home">

@@ -24,3 +24,7 @@ function get_header_admin()
     else
         echo "không tồn tại đường dẫn {$path_header}";
 }
+function trimUnicode($str)
+{
+    return preg_replace('/^[\pZ\pC]+|[\pZ\pC]+$/u', '', $str);
+}

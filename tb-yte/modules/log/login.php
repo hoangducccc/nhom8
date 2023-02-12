@@ -5,11 +5,11 @@ get_header();
 <?php
 if (isset($_POST['username'])) {
     $error = array();
-    if (check_admin('admin@gmail.com', '123456')) {
-        $_SESSION['is_login'] = true;
-        $_SESSION['user_login'] = $username;
-        redirect("?mod=home&act=admin");
-    }
+    // if (check_admin('admin@gmail.com', '123456')) {
+    //     $_SESSION['is_login'] = true;
+    //     $_SESSION['user_login'] = $username;
+    //     redirect("?mod=home&act=admin");
+    // }
     if (empty($_POST['username']))
         $error['username'] = "Không được để trống username";
     else {

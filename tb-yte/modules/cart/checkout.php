@@ -48,7 +48,8 @@ if (is_login()) {
                 $_SESSION['cart']['buy'] = array();
                 unset($_SESSION['info']);
                 $_SESSION['cart']['info'] = array();
-                redirect("?mod=home&act=main");
+                echo "<script>alert('Đặt hàng thành công!');window.location.href='?mod=home&act=main';</script>";
+                // redirect("?mod=home&act=main");
             }
         } else {
             $error['acount'] = "đặt hàng không thành công";
