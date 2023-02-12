@@ -66,35 +66,35 @@ if (isset($_POST['username'])) {
 
 <!-- customer login start -->
 <div class="customer_login">
-    <div class="row">
-        <!--login area start-->
-        <div class="col-lg-6 col-md-6">
-            <div class="account_form">
-                <h2>Đăng nhập</h2>
-                <form action="" method="POST">
-                    <p>
-                        <label>Tên đăng nhập hoặc email <span>*</span></label>
-                        <input type="text" name="username" id="username" autocomplete="off" /><br>
-                        <?php echo form_error('username'); ?>
-                    </p>
-                    <p>
-                        <label>Mật khẩu <span>*</span></label>
-                        <input type="password" name="password" id="password"><br>
-                        <?php echo form_error('password'); ?>
-                    </p>
-                    <div class="login_submit">
-                        <button type="submit" name="btn_login" value="login">Đăng nhập</button>
-                        <a href="?mod=log&act=reg" class="reg">Đăng kí</a>
-                        <a href="#">Quên mật khẩu? </a>
-                        <label for="remember">
-                            <input id="remember" type="checkbox" name="remember_me">
-                            Ghi nhớ đăng nhập
-                        </label>
-                    </div>
-                </form>
+    <!-- <div class="row"> -->
+    <!--login area start-->
+    <!-- <div class="col-lg-6 col-md-6"> -->
+    <div class="account_form">
+        <h2>Đăng nhập</h2>
+        <form action="" method="POST">
+            <p>
+                <label>Tên đăng nhập hoặc email <span>*</span></label>
+                <input type="text" name="username" id="username" autocomplete="off" /><br>
+                <?php echo form_error('username'); ?>
+            </p>
+            <p>
+                <label>Mật khẩu <span>*</span></label>
+                <input type="password" name="password" id="password"><br>
+                <?php echo form_error('password'); ?>
+            </p>
+            <div class="login_submit">
+                <button type="submit" name="btn_login" value="login">Đăng nhập</button>
+                <a href="?mod=log&act=reg" class="reg">Đăng kí</a>
+                <a href="#">Quên mật khẩu? &nbsp;&nbsp;</a>
+                <label for="remember">
+                    <input id="remember" type="checkbox" name="remember_me">
+                    Ghi nhớ đăng nhập
+                </label>
             </div>
-        </div>
+        </form>
     </div>
+</div>
+</div>
 </div>
 <!-- customer login end -->
 <?php
